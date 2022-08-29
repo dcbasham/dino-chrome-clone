@@ -8,7 +8,7 @@ class PlayScene extends Phaser.Scene {
 
   create() {
     const { height, width } = this.game.config;
-    this.gameSpeed = 10;
+    this.gameSpeed = 7;
     this.isGameRunning = false;
     this.respawnTime = 0;
     this.score = 0;
@@ -73,7 +73,7 @@ class PlayScene extends Phaser.Scene {
       this.anims.pauseAll();
       this.dino.setTexture('dino-hurt');
       this.respawnTime = 0;
-      this.gameSpeed = 10;
+      this.gameSpeed = 7;
       this.gameOverScreen.setAlpha(1);
       this.score = 0;
       this.hitSound.play();
