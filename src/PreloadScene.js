@@ -18,10 +18,11 @@ class PreloadScene extends Phaser.Scene {
     this.load.image('cloud', 'assets/cloud.png');
     // spritesheet ATLAS
     // this.load.atlas()
-    this.load.spritesheet('alec', 'assets/spritesheetalec.png', {
-      frameWidth: 97,
-      frameHeight: 259,
-    });
+    this.load.atlas(
+      'alec',
+      'assets/spritesheetalec.png',
+      'assets/spritesheetalec.json'
+    );
     this.load.spritesheet('star', 'assets/stars.png', {
       frameWidth: 9,
       frameHeight: 9,

@@ -1,220 +1,220 @@
 {
-	"textures": [
-		{
-			"image": "spritesheetalec.png",
-			"format": "RGBA8888",
-			"size": {
-				"w": 776,
-				"h": 259
-			},
-			"scale": 1,
-			"frames": [
-				{
-					"filename": "alec1.png",
-					"rotated": false,
-					"trimmed": false,
-					"sourceSize": {
-						"w": 97,
-						"h": 259
-					},
-					"spriteSourceSize": {
-						"x": 0,
-						"y": 0,
-						"w": 97,
-						"h": 259
-					},
-					"frame": {
-						"x": 0,
-						"y": 0,
-						"w": 97,
-						"h": 259
-					},
-					"anchor": {
-						"x": 0.5,
-						"y": 0.5
-					}
-				},
-				{
-					"filename": "alec2.png",
-					"rotated": false,
-					"trimmed": false,
-					"sourceSize": {
-						"w": 97,
-						"h": 259
-					},
-					"spriteSourceSize": {
-						"x": 0,
-						"y": 0,
-						"w": 97,
-						"h": 259
-					},
-					"frame": {
-						"x": 97,
-						"y": 0,
-						"w": 97,
-						"h": 259
-					},
-					"anchor": {
-						"x": 0.5,
-						"y": 0.5
-					}
-				},
-				{
-					"filename": "alec3.png",
-					"rotated": false,
-					"trimmed": false,
-					"sourceSize": {
-						"w": 97,
-						"h": 259
-					},
-					"spriteSourceSize": {
-						"x": 0,
-						"y": 0,
-						"w": 97,
-						"h": 259
-					},
-					"frame": {
-						"x": 194,
-						"y": 0,
-						"w": 97,
-						"h": 259
-					},
-					"anchor": {
-						"x": 0.5,
-						"y": 0.5
-					}
-				},
-				{
-					"filename": "alec4.png",
-					"rotated": false,
-					"trimmed": false,
-					"sourceSize": {
-						"w": 97,
-						"h": 259
-					},
-					"spriteSourceSize": {
-						"x": 0,
-						"y": 0,
-						"w": 97,
-						"h": 259
-					},
-					"frame": {
-						"x": 291,
-						"y": 0,
-						"w": 97,
-						"h": 259
-					},
-					"anchor": {
-						"x": 0.5,
-						"y": 0.5
-					}
-				},
-				{
-					"filename": "alec5.png",
-					"rotated": false,
-					"trimmed": false,
-					"sourceSize": {
-						"w": 97,
-						"h": 259
-					},
-					"spriteSourceSize": {
-						"x": 0,
-						"y": 0,
-						"w": 97,
-						"h": 259
-					},
-					"frame": {
-						"x": 388,
-						"y": 0,
-						"w": 97,
-						"h": 259
-					},
-					"anchor": {
-						"x": 0.5,
-						"y": 0.5
-					}
-				},
-				{
-					"filename": "alec6.png",
-					"rotated": false,
-					"trimmed": false,
-					"sourceSize": {
-						"w": 97,
-						"h": 259
-					},
-					"spriteSourceSize": {
-						"x": 0,
-						"y": 0,
-						"w": 97,
-						"h": 259
-					},
-					"frame": {
-						"x": 485,
-						"y": 0,
-						"w": 97,
-						"h": 259
-					},
-					"anchor": {
-						"x": 0.5,
-						"y": 0.5
-					}
-				},
-				{
-					"filename": "alec7.png",
-					"rotated": false,
-					"trimmed": false,
-					"sourceSize": {
-						"w": 97,
-						"h": 259
-					},
-					"spriteSourceSize": {
-						"x": 0,
-						"y": 0,
-						"w": 97,
-						"h": 259
-					},
-					"frame": {
-						"x": 582,
-						"y": 0,
-						"w": 97,
-						"h": 259
-					},
-					"anchor": {
-						"x": 0.5,
-						"y": 0.5
-					}
-				},
-				{
-					"filename": "alec8.png",
-					"rotated": false,
-					"trimmed": false,
-					"sourceSize": {
-						"w": 97,
-						"h": 259
-					},
-					"spriteSourceSize": {
-						"x": 0,
-						"y": 0,
-						"w": 97,
-						"h": 259
-					},
-					"frame": {
-						"x": 679,
-						"y": 0,
-						"w": 97,
-						"h": 259
-					},
-					"anchor": {
-						"x": 0.5,
-						"y": 0.5
-					}
-				}
-			]
-		}
-	],
-	"meta": {
-		"app": "https://www.codeandweb.com/texturepacker",
-		"version": "3.0",
-		"smartupdate": "$TexturePacker:SmartUpdate:dc2ae3be1488515bd29f355f73941e5a:c9290ad99054c2b451f5c09954c0334b:d2765fa2e634be39f64c000b901bdb59$"
-	}
+  "textures": [
+    {
+      "image": "spritesheetalec.png",
+      "format": "RGBA8888",
+      "size": {
+        "w": 776,
+        "h": 216
+      },
+      "scale": 1,
+      "frames": [
+        {
+          "filename": "alec1",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 97,
+            "h": 259
+          },
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 29,
+            "w": 96,
+            "h": 208
+          },
+          "frame": {
+            "x": 0,
+            "y": 0,
+            "w": 96,
+            "h": 208
+          },
+          "anchor": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "filename": "alec2",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 97,
+            "h": 259
+          },
+          "spriteSourceSize": {
+            "x": 1,
+            "y": 36,
+            "w": 96,
+            "h": 200
+          },
+          "frame": {
+            "x": 97,
+            "y": 0,
+            "w": 96,
+            "h": 200
+          },
+          "anchor": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "filename": "alec3",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 97,
+            "h": 259
+          },
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 26,
+            "w": 97,
+            "h": 209
+          },
+          "frame": {
+            "x": 194,
+            "y": 0,
+            "w": 97,
+            "h": 209
+          },
+          "anchor": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "filename": "alec4",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 97,
+            "h": 259
+          },
+          "spriteSourceSize": {
+            "x": 2,
+            "y": 19,
+            "w": 93,
+            "h": 216
+          },
+          "frame": {
+            "x": 291,
+            "y": 0,
+            "w": 93,
+            "h": 216
+          },
+          "anchor": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "filename": "alec5",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 97,
+            "h": 259
+          },
+          "spriteSourceSize": {
+            "x": 2,
+            "y": 22,
+            "w": 93,
+            "h": 213
+          },
+          "frame": {
+            "x": 388,
+            "y": 0,
+            "w": 93,
+            "h": 213
+          },
+          "anchor": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "filename": "alec6",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 97,
+            "h": 259
+          },
+          "spriteSourceSize": {
+            "x": 1,
+            "y": 36,
+            "w": 96,
+            "h": 198
+          },
+          "frame": {
+            "x": 485,
+            "y": 0,
+            "w": 96,
+            "h": 198
+          },
+          "anchor": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "filename": "alec7",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 97,
+            "h": 259
+          },
+          "spriteSourceSize": {
+            "x": 4,
+            "y": 29,
+            "w": 92,
+            "h": 204
+          },
+          "frame": {
+            "x": 582,
+            "y": 0,
+            "w": 92,
+            "h": 204
+          },
+          "anchor": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "filename": "alec8",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 97,
+            "h": 259
+          },
+          "spriteSourceSize": {
+            "x": 1,
+            "y": 22,
+            "w": 89,
+            "h": 213
+          },
+          "frame": {
+            "x": 679,
+            "y": 0,
+            "w": 89,
+            "h": 213
+          },
+          "anchor": {
+            "x": 0,
+            "y": 0
+          }
+        }
+      ]
+    }
+  ],
+  "meta": {
+    "app": "https://www.codeandweb.com/texturepacker",
+    "version": "3.0",
+    "smartupdate": "$TexturePacker:SmartUpdate:53002c2ed19b05e1b1667f0eada3105e:c9290ad99054c2b451f5c09954c0334b:d2765fa2e634be39f64c000b901bdb59$"
+  }
 }
