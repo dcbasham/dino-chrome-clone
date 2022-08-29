@@ -1,8 +1,8 @@
-
 import Phaser from 'phaser';
 
 import PlayScene from './PlayScene';
 import PreloadScene from './PreloadScene';
+import SceneAlec from './SceneAlec';
 
 const config = {
   type: Phaser.AUTO,
@@ -13,10 +13,10 @@ const config = {
   physics: {
     default: 'arcade',
     arcade: {
-      debug: false
-    }
+      debug: false,
+    },
   },
-  scene: [PreloadScene, PlayScene]
+  scene: [PreloadScene, SceneAlec],
 };
 
 new Phaser.Game(config);
