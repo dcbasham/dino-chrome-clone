@@ -16,7 +16,7 @@ const config = {
       debug: false,
     },
   },
-  scene: [PreloadScene, SceneAlec],
+  scene: [PreloadScene, PlayScene],
 };
 
 new Phaser.Game(config);

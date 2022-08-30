@@ -11,6 +11,16 @@ class PlayScene extends Phaser.Scene {
     this.isGameRunning = false;
     this.respawnTime = 0;
     this.score = 0;
+    this.dude = '';
+
+    const atlasTexture = this.textures.get('alec');
+    const frames = atlasTexture.getFrameNames();
+    for (let i = 0; i < frames.length; i += 1) {
+      let x = 0;
+      this.dude = this.add.image(x, height, 'alec', frames[i]).setOrigin(0, 1);
+      x += 1;
+      console.log(this.dude);
+    }
 
     this.jumpSound = this.sound.add('jump', { volume: 0.2 });
     this.hitSound = this.sound.add('hit', { volume: 0.2 });
@@ -21,14 +31,7 @@ class PlayScene extends Phaser.Scene {
       .setOrigin(0, 1)
       .setImmovable();
     this.ground = this.add
-      .tileSprite(0, height, 88, 26, 'ground')
-      .setOrigin(0, 1);
-    this.dino = this.physics.add
-      .sprite(0, height, 'dino-idle')
-      .setCollideWorldBounds(true)
-      .setGravityY(5000)
-      .setBodySize(44, 92)
-      .setDepth(1)
+      .tileSprite(0, height, width, 26, 'ground')
       .setOrigin(0, 1);
 
     this.scoreText = this.add
@@ -65,7 +68,7 @@ class PlayScene extends Phaser.Scene {
     this.gameOverScreen.add([this.gameOverText, this.restart]);
 
     this.obsticles = this.physics.add.group();
-
+    // this.anims.play();
     this.initAnims();
     this.initStartTrigger();
     this.initColliders();
@@ -75,7 +78,7 @@ class PlayScene extends Phaser.Scene {
 
   initColliders() {
     this.physics.add.collider(
-      this.dino,
+      this.dude,
       this.obsticles,
       () => {
         this.highScoreText.x = this.scoreText.x - this.scoreText.width - 20;
@@ -94,7 +97,7 @@ class PlayScene extends Phaser.Scene {
         this.physics.pause();
         this.isGameRunning = false;
         this.anims.pauseAll();
-        this.dino.setTexture('dino-hurt');
+        this.dude.setTexture('dino-hurt');
         this.respawnTime = 0;
         this.gameSpeed = 7;
         this.gameOverScreen.setAlpha(1);
@@ -110,7 +113,7 @@ class PlayScene extends Phaser.Scene {
     const { width, height } = this.game.config;
     this.physics.add.overlap(
       this.startTrigger,
-      this.dino,
+      this.dude,
       () => {
         if (this.startTrigger.y === 10) {
           this.startTrigger.body.reset(0, height);
@@ -124,8 +127,8 @@ class PlayScene extends Phaser.Scene {
           loop: true,
           callbackScope: this,
           callback: () => {
-            this.dino.setVelocityX(80);
-            this.dino.play('dino-run', 1);
+            this.dude.setVelocityX(80);
+            this.dude.play('dino-run', 1);
 
             if (this.ground.width < width) {
               this.ground.width += 17 * 2;
@@ -134,7 +137,7 @@ class PlayScene extends Phaser.Scene {
             if (this.ground.width >= 1000) {
               this.ground.width = width;
               this.isGameRunning = true;
-              this.dino.setVelocityX(0);
+              this.dude.setVelocityX(0);
               this.scoreText.setAlpha(1);
               this.environment.setAlpha(1);
               startEvent.remove();
@@ -149,31 +152,40 @@ class PlayScene extends Phaser.Scene {
 
   initAnims() {
     this.anims.create({
-      key: 'dino-run',
-      frames: this.anims.generateFrameNumbers('dino', { start: 2, end: 3 }),
+      key: 'walk',
+      frames: this.anims.generateFrameNumbers('alec', { start: 1, end: 8 }),
       frameRate: 10,
       repeat: -1,
     });
 
     this.anims.create({
-      key: 'dino-down-anim',
-      frames: this.anims.generateFrameNumbers('dino-down', {
-        start: 0,
-        end: 1,
+      key: 'jump',
+      frames: this.anims.generateFrameNumbers('alec', {
+        start: 7,
+        end: 8,
       }),
       frameRate: 10,
       repeat: -1,
     });
-
-    this.anims.create({
-      key: 'enemy-dino-fly',
-      frames: this.anims.generateFrameNumbers('enemy-bird', {
-        start: 0,
-        end: 1,
+    const run = this.anims.create({
+      key: 'run',
+      frames: this.anims.generateFrameNumbers('alec', {
+        start: 1,
+        end: 8,
       }),
-      frameRate: 6,
+      frameRate: 15,
       repeat: -1,
     });
+    this.anims.play('alec', 'run');
+    // this.anims.create({
+    //   key: 'enemy-dino-fly',
+    //   frames: this.anims.generateFrameNumbers('enemy-bird', {
+    //     start: 0,
+    //     end: 1,
+    //   }),
+    //   frameRate: 6,
+    //   repeat: -1,
+    // });
   }
 
   handleScore() {
@@ -186,7 +198,7 @@ class PlayScene extends Phaser.Scene {
           return;
         }
 
-        this.score++;
+        this.score += 1;
         this.gameSpeed += 0.01;
 
         if (this.score % 100 === 0) {
@@ -213,9 +225,9 @@ class PlayScene extends Phaser.Scene {
 
   handleInputs() {
     this.restart.on('pointerdown', () => {
-      this.dino.setVelocityY(0);
-      this.dino.body.height = 92;
-      this.dino.body.offset.y = 0;
+      this.dude.setVelocityY(0);
+      this.dude.body.height = 92;
+      this.dude.body.offset.y = 0;
       this.physics.resume();
       this.obsticles.clear(true, true);
       this.isGameRunning = true;
@@ -224,24 +236,24 @@ class PlayScene extends Phaser.Scene {
     });
 
     this.input.keyboard.on('keydown_SPACE', () => {
-      if (!this.dino.body.onFloor() || this.dino.body.velocity.x > 0) {
+      if (!this.dude.body.onFloor() || this.dude.body.velocity.x > 0) {
         return;
       }
 
       this.jumpSound.play();
-      this.dino.body.height = 92;
-      this.dino.body.offset.y = 0;
-      this.dino.setVelocityY(-1600);
-      this.dino.setTexture('dino', 0);
+      this.dude.body.height = 92;
+      this.dude.body.offset.y = 0;
+      this.dude.setVelocityY(-1600);
+      this.dude.setTexture('dino', 0);
     });
 
     this.input.keyboard.on('keydown_DOWN', () => {
-      if (!this.dino.body.onFloor() || !this.isGameRunning) {
+      if (!this.dude.body.onFloor() || !this.isGameRunning) {
         return;
       }
 
-      this.dino.body.height = 58;
-      this.dino.body.offset.y = 34;
+      this.dude.body.height = 58;
+      this.dude.body.offset.y = 34;
     });
 
     this.input.keyboard.on('keyup_DOWN', () => {
@@ -249,8 +261,8 @@ class PlayScene extends Phaser.Scene {
         return;
       }
 
-      this.dino.body.height = 92;
-      this.dino.body.offset.y = 0;
+      this.dude.body.height = 92;
+      this.dude.body.offset.y = 0;
     });
   }
 
@@ -312,13 +324,13 @@ class PlayScene extends Phaser.Scene {
       }
     });
 
-    if (this.dino.body.deltaAbsY() > 0) {
-      this.dino.anims.stop();
-      this.dino.setTexture('dino', 0);
+    if (this.dude.body.deltaAbsY() > 0) {
+      this.dude.anims.stop();
+      this.dude.setTexture('dino', 0);
     } else {
-      this.dino.body.height <= 58
-        ? this.dino.play('dino-down-anim', true)
-        : this.dino.play('dino-run', true);
+      this.dude.body.height <= 58
+        ? this.dude.play('dino-down-anim', true)
+        : this.dude.play('dino-run', true);
     }
   }
 }

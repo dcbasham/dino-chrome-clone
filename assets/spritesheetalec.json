@@ -10,7 +10,7 @@
       "scale": 1,
       "frames": [
         {
-          "filename": "alec1",
+          "filename": "alec_1",
           "rotated": false,
           "trimmed": true,
           "sourceSize": {
@@ -35,7 +35,7 @@
           }
         },
         {
-          "filename": "alec2",
+          "filename": "alec_2",
           "rotated": false,
           "trimmed": true,
           "sourceSize": {
@@ -60,7 +60,7 @@
           }
         },
         {
-          "filename": "alec3",
+          "filename": "alec_3",
           "rotated": false,
           "trimmed": true,
           "sourceSize": {
@@ -85,7 +85,7 @@
           }
         },
         {
-          "filename": "alec4",
+          "filename": "alec_4",
           "rotated": false,
           "trimmed": true,
           "sourceSize": {
@@ -110,7 +110,7 @@
           }
         },
         {
-          "filename": "alec5",
+          "filename": "alec_5",
           "rotated": false,
           "trimmed": true,
           "sourceSize": {
@@ -135,7 +135,7 @@
           }
         },
         {
-          "filename": "alec6",
+          "filename": "alec_6",
           "rotated": false,
           "trimmed": true,
           "sourceSize": {
@@ -160,7 +160,7 @@
           }
         },
         {
-          "filename": "alec7",
+          "filename": "alec_7",
           "rotated": false,
           "trimmed": true,
           "sourceSize": {
@@ -185,7 +185,7 @@
           }
         },
         {
-          "filename": "alec8",
+          "filename": "alec_8",
           "rotated": false,
           "trimmed": true,
           "sourceSize": {

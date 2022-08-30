@@ -18,6 +18,7 @@ class PreloadScene extends Phaser.Scene {
     this.load.image('cloud', 'assets/cloud.png');
     // spritesheet ATLAS
     // this.load.atlas()
+
     this.load.atlas(
       'alec',
       'assets/spritesheetalec.png',
@@ -57,7 +58,7 @@ class PreloadScene extends Phaser.Scene {
   }
 
   create() {
-    this.scene.start('SceneAlec');
+    this.scene.start('PlayScene');
   }
 }
 
